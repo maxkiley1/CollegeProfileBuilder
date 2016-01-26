@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
     var colleges: [College] = []
@@ -13,12 +13,12 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
         //setting datasource and delegate to the view controller
-       // myTableView.dataSource = self
-        //myTableView.delegate = self
+        myTableView.dataSource = self
+        myTableView.delegate = self
         //this assigns a new College and all of its properties to the array colleges
-        colleges.append(College(Name:"University of Illinois", Location: "Urbana-Champaign, Illinois", NumberOfStudents: 44,087, Picture: UIImage(named: "illinois")!))
-        colleges.append(College(Name: "University of Wisconsin - Madison", Location: "Madison, Wisconsin", NumberOfStudents: 43,193, Picture: UIImage(Named: "madison")!))
-        colleges.append(College(Name: "Iowa State University", Location: "Ames, Iowa", NumberOfStudents: 34,732, Picture: UIImage(named: "iowa")!))
+        colleges.append(College(Name:"University of Illinois", Location: "Urbana-Champaign, Illinois", NumberOfStudents: 44087, Picture: UIImage(named: "illinois")!))
+        colleges.append(College(Name: "University of Wisconsin - Madison", Location: "Madison, Wisconsin", NumberOfStudents: 43193, Picture: UIImage(named: "madison")!))
+        colleges.append(College(Name: "Iowa State University", Location: "Ames, Iowa", NumberOfStudents: 34732, Picture: UIImage(named: "iowa")!))
     
     
     }
@@ -55,6 +55,17 @@ class ViewController: UIViewController
         colleges.removeAtIndex(sourceIndexPath.row)
         colleges.insert(college, atIndex: destinationIndexPath.row)
     }
+    //creating a cell that would store your data on a tableView
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let myTableViewCell = myTableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        myTableViewCell.textLabel?.text = colleges[indexPath.row].name
+        myTableViewCell.detailTextLabel?.text = colleges[indexPath.row].location
+        return myTableViewCell
+    }
+
+    
+    
     
     
  
