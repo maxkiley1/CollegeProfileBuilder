@@ -14,6 +14,8 @@
 		3F0704171C4FF56000BD7B12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0704151C4FF56000BD7B12 /* LaunchScreen.storyboard */; };
 		3F0704221C4FF56000BD7B12 /* College_Profile_BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0704211C4FF56000BD7B12 /* College_Profile_BuilderTests.swift */; };
 		3F07042D1C4FF56000BD7B12 /* College_Profile_BuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07042C1C4FF56000BD7B12 /* College_Profile_BuilderUITests.swift */; };
+		3F97C4F41C5A8315006973D6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F97C4F31C5A8315006973D6 /* DetailViewController.swift */; };
+		3FB9CAA11C6CF9CC00727370 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9CAA01C6CF9CC00727370 /* MapViewController.swift */; };
 		3FF92C051C51515400AFB115 /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF92C041C51515400AFB115 /* College.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		3F0704281C4FF56000BD7B12 /* College Profile BuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College Profile BuilderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F07042C1C4FF56000BD7B12 /* College_Profile_BuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Profile_BuilderUITests.swift; sourceTree = "<group>"; };
 		3F07042E1C4FF56000BD7B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F97C4F31C5A8315006973D6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3FB9CAA01C6CF9CC00727370 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3FF92C041C51515400AFB115 /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,8 @@
 			children = (
 				3F07040C1C4FF56000BD7B12 /* AppDelegate.swift */,
 				3F07040E1C4FF56000BD7B12 /* ViewController.swift */,
+				3F97C4F31C5A8315006973D6 /* DetailViewController.swift */,
+				3FB9CAA01C6CF9CC00727370 /* MapViewController.swift */,
 				3FF92C041C51515400AFB115 /* College.swift */,
 				3F0704101C4FF56000BD7B12 /* Main.storyboard */,
 				3F0704131C4FF56000BD7B12 /* Assets.xcassets */,
@@ -196,6 +202,7 @@
 				TargetAttributes = {
 					3F0704081C4FF56000BD7B12 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = E96889WDJF;
 					};
 					3F07041C1C4FF56000BD7B12 = {
 						CreatedOnToolsVersion = 7.2;
@@ -262,6 +269,8 @@
 				3F07040F1C4FF56000BD7B12 /* ViewController.swift in Sources */,
 				3F07040D1C4FF56000BD7B12 /* AppDelegate.swift in Sources */,
 				3FF92C051C51515400AFB115 /* College.swift in Sources */,
+				3FB9CAA11C6CF9CC00727370 /* MapViewController.swift in Sources */,
+				3F97C4F41C5A8315006973D6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "College Profile Builder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maxkiley.College-Profile-Builder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -414,10 +426,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "College Profile Builder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maxkiley.College-Profile-Builder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
